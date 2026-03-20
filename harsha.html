@@ -1,34 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firodiya Karandak Registration Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;   
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 80%;              
+            padding: 10px;
+            margin: 0 auto 15px;     
+            display: block;
+            border: none;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 25px;
+            display: block;
+            margin: 20px auto;
+            background-color: #ec6024;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ca5110;
+        }
+    </style>
 </head>
-<body style="background-image: url('parth.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
-    <center>
-        <font size="5" color="white">
+
+<body>
+
+    <div class="container">
+
         <h2>Firodiya Karandak - Student Registration Form</h2>
 
         <form action="submit_form.php" method="POST">
 
-            <label>Full Name:</label><br>
-            <input type="text" name="full_name" required><br><br>
+            <label>Full Name:</label>
+            <input type="text" name="full_name" required>
 
-            <label>College Name:</label><br>
-            <input type="text" name="college_name" required><br><br>
+            <label>College Name:</label>
+            <input type="text" name="college_name" required>
 
-            <label>Department:</label><br>
-            <input type="text" name="department" required><br><br>
+            <label>Department:</label>
+            <input type="text" name="department" required>
 
-            <label>Year of Study:</label><br>
+            <label>Year of Study:</label>
             <select name="year" required>
                 <option value="">--Select Year--</option>
                 <option value="FY">First Year</option>
                 <option value="SY">Second Year</option>
                 <option value="TY">Third Year</option>
                 <option value="Final">Final Year</option>
-            </select><br><br>
+            </select>
 
-            <label>Role in Team:</label><br>
+            <label>Role in Team:</label>
             <select name="role" required>
                 <option value="">--Select Role--</option>
                 <option value="Actor">Actor</option>
@@ -37,22 +105,22 @@
                 <option value="Backstage">Backstage</option>
                 <option value="Music">Music</option>
                 <option value="Technical">Technical</option>
-            </select><br><br>
+            </select>
 
-            <label>Email:</label><br>
-            <input type="email" name="email" required><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-            <label>Contact Number:</label><br>
-            <input type="tel" name="contact" pattern="[0-9]{10}" required><br><br>
+            <label>Contact Number:</label>
+            <input type="tel" name="contact" pattern="[0-9]{10}" required>
 
-            <label>Previous Theatre Experience (if any):</label><br>
-            <textarea name="experience" rows="4" cols="40"></textarea><br><br>
+            <label>Previous Theatre Experience (if any):</label>
+            <textarea name="experience" rows="4"></textarea>
 
             <input type="submit" value="Submit Registration">
 
         </form>
-        
-    </center>
+
+    </div>
 
 </body>
 </html>
